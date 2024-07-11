@@ -32,8 +32,8 @@ services:
       context: .
       dockerfile: app.dockerfile
       args:
-        - NEXT_PUBLIC_API_URL=https:/prpbck.mcx.design/api
-        - NEXT_PUBLIC_WS_URL=https:/prpbck.mcx.design
+        - NEXT_PUBLIC_API_URL=https://prpbck.mcx.design/api
+        - NEXT_PUBLIC_WS_URL=https://prpbck.mcx.design
     depends_on:
       - perplexica-backend
     expose:
