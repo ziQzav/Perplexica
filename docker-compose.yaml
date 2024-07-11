@@ -4,7 +4,7 @@ services:
     volumes:
       - ./searxng:/etc/searxng:rw
     expose:
-      - 4000:8080
+      - 8000:8080
     networks:
       - perplexica-network
     restart: unless-stopped
@@ -14,7 +14,7 @@ services:
       context: .
       dockerfile: backend.dockerfile
       args:
-        - SEARXNG_API_URL=http://searx.mcx.design:8080
+        - SEARXNG_API_URL=http://searx.mcx.design
     depends_on:
       - searxng
     expose:
